@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Permanent+Marker&display=swap');
+:root {
+    --banner-color: orange;
+    --background-alt-color: rgb(255, 167, 109);
+    --background-color: rgb(255, 187, 109);
+    --dim-dark-color: rgb(36, 36, 36);
+    --book-font-family: 'Permanent Marker', cursive;
+    --site-font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
+    background: var(--background-color);
+    font-family: var(--site-font-family);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.horizontal-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1200px;
+    min-width: 1000px;
+}
+
+.horizontal-block.library {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 1000px;
+    min-width: 800px;
+    height: 100%;
+    padding: 18px;
+}
+
+.lib-table {
+    justify-self: flex-start;
+    border-collapse: collapse;
+    font-size: 16px;
+    min-width: 600px;
+    table-layout: auto;
+    width: 100%;
+}
+
+.lib-table th {
+    border-top: 2px solid var(--dim-dark-color);
+    border-bottom: 2px solid var(--dim-dark-color);
+}
+
+.lib-table td {
+    border-top: 2px dotted var(--dim-dark-color);
+    border-bottom: 2px dotted var(--dim-dark-color);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.lib-header {
+    font-size: 18px;
+    text-align: left;
+    color: black;
+    text-transform: uppercase;
+}
+
+.lib-header #header-title {
+    width: 600px;
+}
+
+.lib-header #header-author {
+    width: 300px;
+}
+
+.lib-header #header-status {
+    width: 150px;
+}
+
+.lib-header #header-action {
+    width: 100px;
+}
+
+.lib-rows {
+    font-family: var(--book-font-family);
+    text-align: left;
+    color: var(--dim-dark-color);
+}
+
+.lib-row:hover {
+    transform: translate(1px, -1px);
+}
+
+.action-wrap {
+    text-align: center;
+}
+
+.lib-row .read-button {
+    width: 100px;
+}
+
+.lib-row .read-button input:checked+label {
+    color: green;
+}
+
+.build-book {
+    background: inherit;
+    border: 1px solid black;
+    padding: 0px 6px 0px 6px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 1000;
+    font-family: Arial, sans-serif;
+    color: green;
+}
+
+.build-book:hover {
+    background: green;
+    color: var(--dim-dark-color);
+}
+
+.build-book:disabled {
+    background: gray;
+    color: var(--dim-dark-color);
+}
+
+.delete-book {
+    background: inherit;
+    border: 1px solid black;
+    padding: 0px 6px 0px 6px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 1000;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 0, 0);
+}
+
+.delete-book:hover {
+    background: rgb(255, 0, 0);
+    color: var(--dim-dark-color);
+}
+
+.builder:hover {
+    transform: translate(0px);
+}
+
+.builder input[type=text]:placeholder-shown {
+    /* border-bottom: 2px solid red; */
+    /* Red border only if the input is empty */
+}
+
+.builder input[type=text]:invalid {
+    /* background-color: var(--background-alt-color); */
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+}
+
+.builder input[type=text] {
+    /* border: 0px; */
+    width: 100%;
+    background-color: inherit;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+.builder input[type=text]:focus {
+    background-color: lightblue;
+}
+
+
+/* .postit {
+    font-family: var(--book-font-family);
+    font-size: 24px;
+} */
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background: var(--banner-color);
+    border-bottom: 2px solid var(--dim-dark-color);
+    border-top: 2px solid var(--dim-dark-color);
+}
+
+header {
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--dim-dark-color);
+}
+
+header .menu {
+    margin-bottom: 6px;
+}
+
+header .button-save {
+    border: 2px solid var(--dim-dark-color);
+    color: var(--dim-dark-color);
+    background: green;
+    font-family: inherit;
+    font-weight: bolder;
+}
+
+header .button-save:hover {
+    background: rgb(0, 182, 0);
+    transform: translate(-1px, 1px);
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+footer {
+    height: 64px;
+    color: var(--dim-dark-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    /* margin-bottom: auto; */
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+}
